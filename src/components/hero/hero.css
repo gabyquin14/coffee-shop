@@ -1,0 +1,78 @@
+.hero {
+  background-image: url("../../icons/coffee-hero.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  box-sizing: border-box;
+}
+
+.hero-wrapper {
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 100vh;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
+.hero-content {
+  padding: 10rem;
+  color: #cecbcb;
+  font-family: 'Caudex', serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 45%;
+}
+
+.hero-content h1 {
+  margin: 0 0 1rem;
+  font-size: 6rem;
+  letter-spacing: 0.2rem;
+}
+
+.hero-content p {
+  font-size: 2rem;
+  margin: 1rem 0 3rem;
+}
+
+.hero-content button {
+  cursor: pointer;
+  font-size: 2rem;
+  background-color: transparent;
+  outline: none;
+  border: 0.2rem solid #cecbcb;
+  padding: 1rem;
+  font-weight: 500;
+  border-radius: 0.5rem;
+  transition: all 0.2s ease-in-out;
+}
+
+.hero-content button a {
+  color: #cecbcb;
+  text-decoration: none;
+}
+
+.hero-content button:hover {
+  background-color: #cecbcb;
+  color: rgb(60, 40, 40);
+}
+
+.hero-content button:hover a {
+  color: rgb(60, 40, 40);
+}
+
+@media screen and (max-width: 500px) {
+  .hero-content {
+    padding: 4rem;
+    width: 100%;
+  }
+
+  .hero-content h1 {
+    font-size: 4rem;
+  }
+
+  .hero-content p {
+    font-size: 1.5rem;
+  }
+}

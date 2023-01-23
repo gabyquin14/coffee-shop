@@ -1,0 +1,131 @@
+.selection {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #3c2828;
+}
+
+.selection h1 {
+  font-size: 6rem;
+  margin: 0 0 2rem;
+}
+
+.selection .selection-resume {
+  font-size: 2.5rem;
+  margin: 0 0 2rem;
+  width: 50%;
+}
+
+.selection-coffees {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2rem;
+  column-gap: 6rem;
+}
+
+.selection-coffees .selection-coffee-img {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 20rem;
+  height: 20rem;
+}
+
+.selection-coffee-container {
+  background-color: #3c2828;
+  border-radius: 2rem;
+  width: 26rem;
+  height: 40rem;
+  max-height: 40rem;
+  padding: 4rem;
+  margin-top: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #cecbcb;
+}
+
+.selection-coffee-container .selection-coffee-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.selection-coffee-info>div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1.5rem 0;
+}
+
+.selection-coffee-info>div h3 {
+  font-size: 2rem;
+  margin: 0;
+}
+
+.selection-coffee-info>div span {
+  font-size: 1.8rem;
+}
+
+.selection-coffee-info p {
+  font-size: 1.5rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.selection button {
+  cursor: pointer;
+  font-size: 2rem;
+  background-color: transparent;
+  outline: none;
+  border: 0.2rem solid #3c2828;
+  padding: 1rem;
+  font-weight: 500;
+  border-radius: 0.5rem;
+  transition: all 0.2s ease-in-out;
+}
+
+.selection button a {
+  color: #3c2828;
+  text-decoration: none;
+}
+
+.selection button:hover {
+  background-color: #3c2828;
+  color: #cecbcb;
+}
+
+.selection button:hover a {
+  color: #cecbcb;
+}
+
+@media screen and (max-width: 600px) {
+  .selection {
+    height: 100%;
+    margin: 4rem 0;
+  }
+
+  .selection h1 {
+    font-size: 3rem;
+    margin: 0 0 1rem;
+  }
+
+  .selection .selection-resume {
+    font-size: 1.8rem;
+    margin: 0 0 1rem;
+    width: 80%;
+  }
+
+  .selection-coffees {
+    flex-direction: column;
+    column-gap: 0;
+  }
+
+  .selection-coffee-container {
+    width: 24rem;
+    height: 36rem;
+  }
+}
