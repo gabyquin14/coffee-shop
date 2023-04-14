@@ -1,0 +1,43 @@
+.discount {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: #528e52;
+  color: #fbf0e7;
+  border-radius: 1rem;
+  width: 80%;
+  max-width: 60rem;
+  margin: 8rem auto;
+  padding: 2rem;
+}
+
+.discount h1 {
+  font-size: 2.4rem;
+  margin: 1rem 0;
+}
+
+.discount span {
+  font-size: 1.6rem;
+}
+
+@media screen and (min-width: 800px) {
+  .discount {
+    width: 100%;
+    max-width: 80rem;
+    height: 20rem;
+    margin: 8rem auto 0;
+    padding: 2rem;
+    flex-direction: row;
+    justify-content: center;
+    column-gap: 4rem;
+  }
+
+  .discount h1 {
+    font-size: 3.5rem;
+    margin: 1rem 0;
+  }
+
+  .discount span {
+    font-size: 2rem;
+  }
+}

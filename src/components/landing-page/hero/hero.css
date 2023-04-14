@@ -1,5 +1,5 @@
 .hero {
-  background-image: url("../../icons/coffee-hero.jpg");
+  background-image: url("../../../icons/coffee-hero.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh;
@@ -10,35 +10,37 @@
   background-color: rgba(0, 0, 0, 0.5);
   height: 100vh;
   display: flex;
-  justify-content: end;
+  justify-content: center;
   align-items: center;
 }
 
 .hero-content {
-  padding: 10rem;
+  padding: 4rem;
   color: #cecbcb;
   font-family: 'Caudex', serif;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 45%;
+  width: 100%;
+  opacity: 0;
+  transform: translate3d(0, -5rem, 0);
 }
 
 .hero-content h1 {
   margin: 0 0 1rem;
-  font-size: 6rem;
+  font-size: 4rem;
   letter-spacing: 0.2rem;
 }
 
 .hero-content p {
-  font-size: 2rem;
+  font-size: 1.6rem;
   margin: 1rem 0 3rem;
 }
 
 .hero-content button {
   cursor: pointer;
-  font-size: 2rem;
+  font-size: 1.8rem;
   background-color: transparent;
   outline: none;
   border: 0.2rem solid #cecbcb;
@@ -62,17 +64,33 @@
   color: rgb(60, 40, 40);
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (min-width: 500px) {
   .hero-content {
-    padding: 4rem;
-    width: 100%;
+    padding: 10rem;
   }
 
   .hero-content h1 {
-    font-size: 4rem;
+    margin: 0 0 1rem;
+    font-size: 6rem;
+    letter-spacing: 0.2rem;
   }
 
   .hero-content p {
-    font-size: 1.5rem;
+    font-size: 2rem;
+    margin: 1rem 0 3rem;
+  }
+
+  .hero-content button {
+    font-size: 2.5rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .hero-wrapper {
+    justify-content: end;
+  }
+
+  .hero-content {
+    width: 45%;
   }
 }

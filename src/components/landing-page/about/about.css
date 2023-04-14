@@ -1,0 +1,150 @@
+.about {
+  min-height: 100vh;
+  height: 100%;
+  position: relative;
+}
+
+.barista {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 90%;
+  height: 60%;
+  border-radius: 0 1rem 1rem 0;
+}
+
+.barista img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: bottom;
+  border-radius: 0 1rem 1rem 0;
+}
+
+.about-description {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 80%;
+  transform: translate(-50%, -50%) !important;
+  z-index: 2;
+  background-color: #fbf0e7;
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: 0px 0px 24px 13px rgba(0, 0, 0, 0.06)
+}
+
+.latte-art {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+  overflow: hidden;
+  width: 90%;
+  height: 50%;
+  border-radius: 1rem 0 0 1rem;
+}
+
+.latte-art img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: bottom;
+  border-radius: 1rem 0 0 1rem;
+}
+
+.about-description h3 {
+  margin: 0;
+  font-size: 2.4rem;
+}
+
+.about-description p {
+  font-size: 1.6rem;
+  margin: 0;
+}
+
+
+@media screen and (min-width: 550px) {
+  .barista {
+    width: 45rem;
+    height: 45rem;
+  }
+
+  .latte-art {
+    width: 45rem;
+    height: 45rem;
+  }
+
+  .about-description {
+    width: 60%;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .barista {
+    width: 80%;
+    height: 90%;
+  }
+
+  .latte-art {
+    border-top: 1rem solid #fbf0e7;
+    border-right: 1rem solid #fbf0e7;
+    width: 25%;
+    height: 35%;
+    border-radius: 0;
+    bottom: 0;
+    left: 0;
+  }
+
+  .latte-art img {
+    border-radius: 0rem !important;
+  }
+
+  .about-description {
+    width: 40%;
+    height: 30%;
+    top: unset;
+    bottom: 8%;
+    right: 0;
+    transform: none;
+    box-shadow: none;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 1rem;
+    padding: 4rem;
+
+  }
+
+  .about-description h3 {
+    margin: 0 0 1rem;
+    font-size: 3rem;
+    color: #3c2828;
+  }
+
+  .about-description p {
+    font-size: 1.8rem;
+    margin: 0;
+    max-width: 40rem;
+    color: #66574d;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .about-description h3 {
+    margin: 0 0 1rem;
+    font-size: 4.5rem;
+    color: #3c2828;
+    width: 50%;
+  }
+
+  .about-description p {
+    font-size: 2.5rem;
+    margin: 0;
+    width: 70%;
+    max-width: unset;
+    color: #66574d;
+  }
+}

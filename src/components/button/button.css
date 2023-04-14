@@ -1,0 +1,33 @@
+.main-btn {
+  margin-top: 2rem;
+  cursor: pointer;
+  font-size: 1.6rem;
+  background-color: transparent;
+  outline: none;
+  border: 0.2rem solid #3c2828;
+  color: #3c2828;
+  padding: 1rem;
+  font-weight: 500;
+  border-radius: 0.5rem;
+  transition: all 0.2s ease-in-out;
+}
+
+.main-btn a {
+  color: #3c2828;
+  text-decoration: none;
+}
+
+.main-btn:hover {
+  background-color: #3c2828;
+  color: #cecbcb;
+}
+
+.main-btn:hover a {
+  color: #cecbcb;
+}
+
+@media screen and (min-width: 500px) {
+  .main-btn {
+    font-size: 2.5rem;
+  }
+}

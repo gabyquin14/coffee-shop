@@ -1,0 +1,40 @@
+.shop {
+  margin: 8rem 0;
+  min-height: 100vh;
+  height: 100%;
+}
+
+.shop-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.shop-container .content {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  width: 80%;
+  margin: 2rem auto 0;
+}
+
+@media screen and (min-width: 600px) {
+  .shop-container .content {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: 2rem;
+    column-gap: 4rem;
+    margin: 2rem auto 0;
+    padding: 0 4rem;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .shop-container {
+    display: flex;
+    flex-direction: row;
+  }
+}

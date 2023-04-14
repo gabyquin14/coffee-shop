@@ -1,13 +1,13 @@
 import React, { FC } from "react";
 import "./hero.css";
-import Separator from "../separator";
+import Separator from "../../separator";
 import { NavLink } from "react-router-dom";
 
 export const Hero: FC = () => {
   return (
-    <div className="hero">
+    <section className="hero" id="hero">
       <div className="hero-wrapper">
-        <div className="hero-content">
+        <div className="hero-content fade-up">
           <h1>GAB'S COFFEE SHOP</h1>
           <Separator />
           <p>
@@ -21,7 +21,7 @@ export const Hero: FC = () => {
           </button>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

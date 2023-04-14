@@ -9,9 +9,13 @@ interface Props {
 export const Separator: FC<Props> = ({ color }) => {
   return (
     <div className="separator">
-      <hr style={{ background: `${color}` }} />
-      <TbPlant2 />
-      <hr style={{ background: `${color}` }} />
+      <div className="separator-hr">
+        <hr style={{ background: `${color}` }} />
+      </div>
+      <TbPlant2 style={{ color: `${color}` }} />
+      <div className="separator-hr">
+        <hr style={{ background: `${color}` }} />
+      </div>
     </div>
   );
 };
