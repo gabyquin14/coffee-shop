@@ -4,4 +4,5 @@ export type Coffee = {
   image: string;
   ingredients: string[];
   description: string;
+  price: string;
 };

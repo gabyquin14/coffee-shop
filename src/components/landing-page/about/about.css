@@ -107,7 +107,7 @@
     top: unset;
     bottom: 8%;
     right: 0;
-    transform: none;
+    transform: translate3d(0, 0, 0) !important;
     box-shadow: none;
     text-align: left;
     display: flex;

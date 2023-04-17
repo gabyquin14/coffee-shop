@@ -4,7 +4,7 @@ import Separator from "../../separator";
 import "./selection.css";
 import { NavLink } from "react-router-dom";
 import { Coffee } from "../../../types/types";
-import Card from "../../product card";
+import Card from "../product card";
 import Button from "../../button";
 
 export const Selection: FC = () => {

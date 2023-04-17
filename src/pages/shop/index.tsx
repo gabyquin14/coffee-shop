@@ -1,11 +1,15 @@
 import React, { FC } from "react";
 import "./shop.css";
-import ShopContainer from "./ShopContainer";
+import Hero from "../../components/shop-page/hero";
+import Filters from "../../components/shop-page/filters";
+import Selection from "../../components/shop-page/selection";
 
 export const Shop: FC = () => {
   return (
     <div className="shop">
-      <ShopContainer />
+      <Hero />
+      <Filters />
+      <Selection />
     </div>
   );
 };

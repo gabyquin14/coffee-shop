@@ -1,6 +1,6 @@
 import React, { FC } from "react";
 import "./card.css";
-import { Coffee } from "../../types/types";
+import { Coffee } from "../../../types/types";
 import { NavLink } from "react-router-dom";
 
 interface Props {

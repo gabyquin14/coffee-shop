@@ -8,16 +8,16 @@ interface Props {
 }
 
 export const SideBarFilter: FC<Props> = ({ setData }) => {
-  const [current, setCurrent] = useState("hot");
-  const data = useGetItems({ url: `coffee/${current}` });
+  // const [current, setCurrent] = useState("hot");
+  // const data = useGetItems({ url: `coffee/${current}` });
 
-  useEffect(() => {
-    setData(data);
-  }, [current, data]);
+  // useEffect(() => {
+  //   setData(data);
+  // }, [current, data]);
 
   return (
     <div className="sidebar-filter">
-      <div>
+      {/* <div>
         <h1>Browse by:</h1>
         <hr />
         <h2>Coffee</h2>
@@ -44,7 +44,7 @@ export const SideBarFilter: FC<Props> = ({ setData }) => {
           <li>Price: Low to High</li>
           <li>Price: High to Low</li>
         </ul>
-      </div>
+      </div> */}
     </div>
   );
 };

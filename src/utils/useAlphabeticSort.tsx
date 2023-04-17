@@ -2,7 +2,7 @@ import axios from "axios";
 import { useState, useEffect, FC } from "react";
 import { Coffee } from "../types/types";
 
-const useGetItems = () => {
+const useAlphabeticSort = () => {
   const [data, setData] = useState<Array<Coffee>>();
   const baseUrl = "https://coffee-api-gabyquin14.onrender.com/api/coffees";
 
@@ -20,4 +20,4 @@ const useGetItems = () => {
   return data;
 };
 
-export default useGetItems;
+export default useAlphabeticSort;

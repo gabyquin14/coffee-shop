@@ -1,0 +1,139 @@
+.coffee-details {
+  padding: 2rem;
+  margin-top: 6rem;
+  color: #3c2828;
+}
+
+.coffee-details-img {
+  width: 100%;
+  max-width: 90vw;
+  margin-top: 2rem;
+  object-fit: cover;
+}
+
+.coffee-details-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.coffee-details-title {
+  font-size: 2.4rem;
+  margin: 2rem 0 0.8rem 0;
+}
+
+.coffee-details-price {
+  font-size: 2rem;
+  color: #658f51;
+}
+
+.coffee-details-description {
+  font-size: 1.8rem;
+  color: #66574d;
+}
+
+.coffee-details-separator {
+  border-bottom: 0.1rem solid #53494941;
+  width: 100%;
+  padding-top: 2rem;
+}
+
+.coffee-details-quantity-title {
+  margin-top: 2rem;
+  font-size: 2rem;
+  font-style: italic;
+}
+
+.coffee-details-cart {
+  display: flex;
+  column-gap: 2rem;
+  width: 100%;
+}
+
+.coffee-details-quantity-container {
+  background-color: white;
+  border-radius: 1rem;
+  display: flex;
+  column-gap: 0.5rem;
+  padding: 1rem;
+  font-size: 2rem;
+}
+
+.coffee-details-quantity-container button,
+.coffee-details-quantity-container input,
+.coffee-details-add-to-cart,
+.coffee-details-buy-now {
+  outline: none;
+  background-color: transparent;
+  border: none;
+  text-align: center;
+}
+
+.coffee-details-add-to-cart {
+  border-radius: 1rem;
+  padding: 1rem;
+  font-size: 2rem;
+  text-align: center;
+  width: 100%;
+  background-color: #658f51;
+  color: #fbf0e7;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 0.5rem;
+}
+
+.coffee-details-buy-now {
+  border-radius: 1rem;
+  padding: 1.5rem 1rem;
+  font-size: 2rem;
+  text-align: center;
+  width: 100%;
+  background-color: #A78D7B;
+  color: #fbf0e7;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 0.5rem;
+  margin-top: 2rem;
+}
+
+@media screen and (min-width: 700px) {
+  .coffee-details-container {
+    display: flex;
+    column-gap: 4rem;
+  }
+
+  .coffee-details-img {
+    flex: 0 0 52.333333%;
+    max-width: 52.333333%;
+  }
+
+  .coffee-details-content {
+    max-width: 100%;
+    flex: 0 0 42.3%;
+    max-width: 42.3%;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .coffee-details-container {
+    display: flex;
+    column-gap: 4rem;
+    justify-content: center;
+  }
+
+  .coffee-details-img {
+    flex: unset;
+    max-width: unset;
+    width: auto;
+  }
+
+  .coffee-details-content {
+    flex: auto;
+    max-width: 40%;
+  }
+}

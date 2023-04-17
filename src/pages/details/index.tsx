@@ -1,43 +1,34 @@
-import React, { FC } from "react";
+import React, { FC, useEffect, useState } from "react";
 import "./details.css";
-import useGetItem from "../../utils/useGetItem";
-import { useParams, useNavigate } from "react-router-dom";
-import { AiOutlineArrowLeft, AiOutlineShoppingCart } from "react-icons/ai";
+import CoffeeDetails from "../../components/details-page/coffee-details";
+import axios from "axios";
+import { Coffee } from "../../types/types";
+import CoffeeDescription from "../../components/details-page/coffee-description";
+import RelatedProducts from "../../components/details-page/related-products";
 
 export const Details: FC = () => {
-  const { type, id } = useParams();
-  const navigate = useNavigate();
-  const data = useGetItem({ url: `coffee/${type}/${id}` });
+  const [data, setData] = useState<Coffee>();
+  const [id, setId] = useState<String>();
 
+  const getData = async () => {
+    try {
+      const resp = await axios.get(
+        `https://coffee-api-gabyquin14.onrender.com/api/coffees/${id}`
+      );
+      setData(resp.data);
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
+  useEffect(() => {
+    id && getData();
+  }, [id]);
   return (
     <>
-      {data && (
-        <section className="details">
-          <button className="details-back" onClick={(): void => navigate(-1)}>
-            <AiOutlineArrowLeft /> <>Go back</>
-          </button>
-          <div className="details-container">
-            <img src={data.image} alt="" />
-            <div className="details-content">
-              <div className="details-title">
-                <h1>{data.name}</h1>
-                <span>$5.00</span>
-              </div>
-              <button className="details-add-to-cart">
-                <>Add to cart</>
-                <AiOutlineShoppingCart />
-              </button>
-              <p>{data.description}</p>
-              <h3>Ingredients</h3>
-              <ul>
-                {data.ingredients.map((ingredient) => (
-                  <li key={ingredient}>{ingredient}</li>
-                ))}
-              </ul>
-            </div>
-          </div>
-        </section>
-      )}
+      <CoffeeDetails data={data} setId={setId} />
+      <CoffeeDescription data={data} />
+      <RelatedProducts />
     </>
   );
 };

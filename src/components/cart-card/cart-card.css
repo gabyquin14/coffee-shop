@@ -1,0 +1,48 @@
+.cart-card-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: "Caudex";
+  margin-bottom: 4rem;
+}
+
+td,
+th {
+  border: 1px solid #4e3d2e27;
+  padding: 1.5rem;
+  font-size: 2rem;
+  vertical-align: middle;
+  margin: auto;
+  text-align: center;
+}
+
+td:first-child {
+  display: flex;
+  align-items: center;
+  column-gap: 2rem;
+}
+
+td img {
+  width: 10rem;
+  height: 12rem;
+  object-fit: cover;
+}
+
+.total-container {
+  width: 100%;
+  border: 1px solid #4e3d2e27;
+  padding: 3rem;
+  margin-top: 6rem;
+}
+
+.total-container h1 {
+  font-size: 2rem;
+  text-align: left;
+}
+
+.total-amount-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 40%;
+  font-size: 2rem;
+}

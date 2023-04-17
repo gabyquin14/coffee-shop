@@ -143,7 +143,7 @@
   color: #4e3d2e;
 }
 
-.active {
+.footer-links-header .active {
   display: flex !important;
 }
 

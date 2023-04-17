@@ -22,10 +22,11 @@ export const TrustSection: FC = () => {
           </li>
           <li>
             <CgCoffee />
-            <h2>Latte art</h2>
+            <h2>Quality Guaranteed</h2>
             <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non
-              inventore illum, assumenda eum hic
+              Things You Need To Know There are many variations of passages of
+              Lorem Ipsum available, but the majority have suffered alteration
+              in some form, by injected humour.
             </p>
           </li>
           <li>

@@ -9,7 +9,6 @@ export const Navigation: FC = () => {
   const navbarRef = useRef<HTMLDivElement>(null);
   const menuBtnRef = useRef<HTMLButtonElement>(null);
   const navLinksRef = useRef<HTMLUListElement>(null);
-  const [navbarActive, setNavbarActive] = useState(false);
 
   const expandNavbar = () => {
     let isExpanded: string;
@@ -32,12 +31,16 @@ export const Navigation: FC = () => {
         ),
       { threshold: 0.85 }
     );
-
-    const hero = document.getElementById("hero");
-    if (hero) {
-      navObs.observe(hero);
+    const observerTarget =
+      location.pathname === "/shop"
+        ? document.getElementById("hero-shop")
+        : location.pathname.includes("/shop/details")
+        ? document.getElementById("coffe-main-image")
+        : document.getElementById("hero");
+    if (observerTarget) {
+      navObs.observe(observerTarget);
     }
-  }, [navbarRef]);
+  }, [navbarRef, location.pathname]);
 
   return (
     <div className={"navigation"} ref={navbarRef}>
@@ -63,7 +66,9 @@ export const Navigation: FC = () => {
           </li>
           {/* {location.pathname === "/shop" && ( */}
           <li className="navigation-link">
-            <AiOutlineShoppingCart />
+            <NavLink to={"/cart"}>
+              <AiOutlineShoppingCart />
+            </NavLink>
           </li>
           {/* )} */}
         </ul>
