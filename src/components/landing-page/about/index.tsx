@@ -20,12 +20,13 @@ export const About: FC = () => {
           succeed on our own terms than on anyone else's. And when we focus on
           superior quality, from seed to cup, our business thrives.
         </p>
-        {/* <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum
-          deserunt accusamus quisquam adipisci. Tempora necessitatibus dolorum
-          asperiores quaerat nemo perspiciatis
-        </p> */}
-        <Button text="Learn more" />
+
+        <Button
+          text="Learn more"
+          clickFunction={() => {
+            window.location.assign("https://bit.ly/3mOQDrv");
+          }}
+        />
       </div>
     </section>
   );

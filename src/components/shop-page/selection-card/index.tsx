@@ -2,12 +2,29 @@ import React, { FC } from "react";
 import "./selection-card.css";
 import { Coffee } from "../../../types/types";
 import { NavLink } from "react-router-dom";
+import { useAppDispatch } from "../../../redux/store";
+import { addToCart } from "../../../redux/cartSlice";
+import { ToastContainer, toast } from "react-toastify";
 
 interface Props {
   coffee: Coffee;
 }
 
 export const SelectionCard: FC<Props> = ({ coffee }) => {
+  const dispatch = useAppDispatch();
+  const dispatchCart = () => {
+    dispatch(
+      addToCart({
+        id: coffee.id,
+        name: coffee.name,
+        image: coffee.image,
+        price: coffee.price,
+        quantity: 1,
+        description: coffee.description,
+      })
+    );
+    toast.success(`${coffee?.name} coffee is added`);
+  };
   return (
     <article className="selection-card">
       <NavLink to={`/shop/details/${coffee.id}`} className="selection-card">
@@ -17,10 +34,9 @@ export const SelectionCard: FC<Props> = ({ coffee }) => {
             <h2>{coffee.name}</h2>
             <span>${coffee.price}.00 USD</span>
           </div>
-
-          <button>Add to cart</button>
         </div>
       </NavLink>
+      <button onClick={dispatchCart}>Add to cart</button>
     </article>
   );
 };

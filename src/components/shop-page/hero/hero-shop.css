@@ -17,7 +17,7 @@
 
 .hero-shop-content {
   padding: 2rem;
-  color: #cecbcb;
+  color: var(--light-bg);
   font-family: 'Caudex', serif;
   display: flex;
   flex-direction: column;

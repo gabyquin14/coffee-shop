@@ -52,12 +52,7 @@ export const Filters: FC = () => {
               dropdown ? "active" : ""
             }`}
           >
-            <li
-              onClick={() => console.log("domo")}
-              className="filters-coffee-option"
-            >
-              Alphabetic
-            </li>
+            <li className="filters-coffee-option">Alphabetic</li>
             <li className="filters-coffee-option">Price: highest to lowest</li>
             <li className="filters-coffee-option">Price: lowest to highest</li>
           </ul>
@@ -69,12 +64,7 @@ export const Filters: FC = () => {
           dropdown ? "active" : ""
         }`}
       >
-        <li
-          onClick={() => console.log("domo")}
-          className="filters-dropdown-option"
-        >
-          Alphabetic
-        </li>
+        <li className="filters-dropdown-option">Alphabetic</li>
         <li className="filters-dropdown-option">Price: highest to lowest</li>
         <li className="filters-dropdown-option">Price: lowest to highest</li>
       </ul>

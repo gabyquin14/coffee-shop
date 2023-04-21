@@ -2,12 +2,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #f3dece;
+  background-color: var(--light-pink);
   font-size: 1.8rem;
 }
 
 .filters {
-  color: #4e3d2e;
+  color: var(--darker-brown);
   position: relative;
 }
 
@@ -83,7 +83,7 @@
 
 .filters-separator {
   height: 4rem;
-  border-right: 0.1rem solid #4e3d2e;
+  border-right: 0.1rem solid var(--darker-brown);
   opacity: 0.5;
 }
 

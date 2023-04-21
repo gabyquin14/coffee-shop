@@ -5,7 +5,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  color: #3c2828;
+  color: var(--darker-brown);
   margin: 4rem 1rem;
 }
 

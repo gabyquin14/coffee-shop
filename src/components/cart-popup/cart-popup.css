@@ -1,0 +1,133 @@
+.cart-popup-wrapper {
+  display: flex;
+  justify-content: flex-end;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  opacity: 0;
+  visibility: hidden;
+  background-color: transparent;
+  transition: all 0.5s ease;
+}
+
+.cart-popup-wrapper.active {
+  opacity: 1;
+  visibility: visible;
+  background-color: rgba(0, 0, 0, 0.525);
+}
+
+.cart-popup {
+  width: 40%;
+  max-width: 50rem;
+  color: var(--darker-brown);
+  background-color: var(--light-bg);
+  height: 100%;
+  z-index: 11;
+  opacity: 0;
+  transition: all 0.5s ease;
+  transform: translate3d(100%, 0, 0);
+}
+
+.cart-popup.active {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+.cart-popup-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 4rem 2rem 2rem;
+}
+
+.cart-popup-header h1,
+.cart-popup-header svg {
+  margin: 0;
+  font-size: 3rem;
+}
+
+.cart-popup-header svg {
+  cursor: pointer;
+}
+
+.cart-popup-content {
+  overflow-y: scroll;
+  height: calc(100vh - 9.9rem - 30rem);
+}
+
+.cart-popup-card {
+  display: flex;
+  column-gap: 4rem;
+  padding: 2rem;
+}
+
+.cart-popup-card-img {
+  height: auto;
+  width: 12rem;
+  object-fit: cover;
+}
+
+.cart-popup-card-content {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2rem;
+  width: 100%;
+}
+
+.cart-popup-card-title {
+  display: flex;
+  column-gap: 2rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cart-popup-card-title h2,
+.cart-popup-card-title svg {
+  font-size: 2rem;
+  margin: 0;
+}
+
+.cart-popup-card-price {
+  font-size: 2rem;
+  text-align: left;
+}
+
+.cart-popup-footer {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 2rem 4rem;
+}
+
+.cart-popup-footer-total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 2rem;
+}
+
+.cart-popup-footer-actions {
+  display: flex;
+  column-gap: 2rem;
+}
+
+.cart-popup-footer-actions button {
+  width: 100%;
+  text-transform: uppercase;
+  font-size: 2rem;
+  outline: none;
+  border: none;
+  border-radius: 1rem;
+  padding: 2rem;
+  background-color: var(--light-brown);
+  color: var(--darker-brown);
+  cursor: pointer;
+}
+
+.cart-popup-footer-actions button:first-child {
+  background-color: var(--darker-brown);
+  color: var(--light-brown);
+}

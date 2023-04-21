@@ -9,18 +9,18 @@
   background-color: transparent;
   border: none;
   outline: none;
-  color: #4e3d2e;
+  color: var(--darker-brown);
   font-family: "Caudex";
   padding: 0;
   font-size: 1.8rem;
 }
 
 .crumbs svg {
-  color: #4e3d2e;
+  color: var(--darker-brown);
 }
 
 .crumbs-active {
-  color: #A78D7B;
+  color: var(--light-brown);
 }
 
 @media screen and (min-width: 800px) {
@@ -33,7 +33,7 @@
   }
 
   .crumbs-active {
-    color: #A78D7B;
+    color: var(--light-brown);
     font-size: 3rem;
   }
 

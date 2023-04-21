@@ -9,7 +9,7 @@ export const TrustSection: FC = () => {
   return (
     <section className="trust-section">
       <h1>Why people choose us?</h1>
-      <Separator color="#3c2828" />
+      <Separator color="var( --darker-brown)" />
       <div className="trust-section-content">
         <ul>
           <li>

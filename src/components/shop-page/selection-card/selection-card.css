@@ -5,7 +5,7 @@
 
 article a {
   text-decoration: none;
-  color: #3c2828;
+  color: var(--darker-brown);
   height: 100%;
 }
 
@@ -43,13 +43,15 @@ article a {
 
 .selection-card button {
   font-size: 2.5rem;
-  background-color: #456a34;
-  color: #fbf0e7;
+  background-color: var(--accent);
+  color: var(--light-bg);
   width: 100%;
   border-radius: 1rem;
   outline: none;
   border: none;
   padding: 1rem;
+  margin-top: 2rem;
+  cursor: pointer;
 }
 
 @media (min-width: 1200px) {

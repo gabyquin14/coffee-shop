@@ -16,7 +16,7 @@
 
 .hero-content {
   padding: 4rem;
-  color: #cecbcb;
+  color: var(--light-bg);
   font-family: 'Caudex', serif;
   display: flex;
   flex-direction: column;
@@ -41,7 +41,7 @@
   font-size: 1.8rem;
   background-color: transparent;
   outline: none;
-  border: 0.2rem solid #cecbcb;
+  border: 0.2rem solid var(--light-bg);
   padding: 1rem;
   font-weight: 500;
   border-radius: 0.5rem;
@@ -49,12 +49,12 @@
 }
 
 .hero-content button a {
-  color: #cecbcb;
+  color: var(--light-bg);
   text-decoration: none;
 }
 
 .hero-content button:hover {
-  background-color: #cecbcb;
+  background-color: var(--light-bg);
   color: rgb(60, 40, 40);
 }
 

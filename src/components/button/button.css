@@ -4,8 +4,8 @@
   font-size: 1.6rem;
   background-color: transparent;
   outline: none;
-  border: 0.2rem solid #3c2828;
-  color: #3c2828;
+  border: 0.2rem solid var(--darker-brown);
+  color: var(--darker-brown);
   padding: 1rem;
   font-weight: 500;
   border-radius: 0.5rem;
@@ -13,17 +13,17 @@
 }
 
 .main-btn a {
-  color: #3c2828;
+  color: var(--darker-brown);
   text-decoration: none;
 }
 
 .main-btn:hover {
-  background-color: #3c2828;
-  color: #cecbcb;
+  background-color: var(--darker-brown);
+  color: var(--light-bg);
 }
 
 .main-btn:hover a {
-  color: #cecbcb;
+  color: var(--light-bg);
 }
 
 @media screen and (min-width: 500px) {

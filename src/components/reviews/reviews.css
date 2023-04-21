@@ -4,7 +4,7 @@
   align-items: center;
   max-width: 100vw;
   min-height: 90vh;
-  background-color: #A78D7B;
+  background-color: var(--light-brown);
   position: relative;
   overflow: hidden;
   margin-top: 6rem;
@@ -13,7 +13,7 @@
 .reviews-presentation h1 {
   font-size: 3rem;
   margin: 4rem 0 0;
-  color: #3c2828;
+  color: var(--darker-brown);
 }
 
 .reviews .bg-wave {
@@ -21,7 +21,7 @@
   bottom: 0;
   min-height: 50vh;
   width: 100%;
-  background-color: #4e3d2e;
+  background-color: var(--darker-brown);
   --mask:
     radial-gradient(100.62px at 50% 135.00px, #000 99%, #0000 101%) calc(50% - 90px) 0/180px 100%,
     radial-gradient(100.62px at 50% -90px, #0000 99%, #000 101%) 50% 45px/180px 100% repeat-x;
@@ -44,7 +44,7 @@
   width: 100%;
   margin-top: auto;
   padding: 2rem;
-  background-color: #fbf0e7;
+  background-color: var(--light-bg);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -103,7 +103,7 @@
 
 .reviews-myswiper .swiper-button-next,
 .reviews-myswiper .swiper-button-prev {
-  color: #201b1b;
+  color: var(--accent);
 }
 
 

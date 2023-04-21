@@ -2,8 +2,8 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-  background-color: #528e52;
-  color: #fbf0e7;
+  background-color: var(--accent);
+  color: var(--light-bg);
   border-radius: 1rem;
   width: 80%;
   max-width: 60rem;

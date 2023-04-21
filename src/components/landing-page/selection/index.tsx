@@ -14,9 +14,12 @@ export const Selection: FC = () => {
       const resp = await axios.get(
         "https://coffee-api-gabyquin14.onrender.com/api/coffees"
       );
-      const selectedCoffees = (resp.data as Array<Coffee>).filter(
-        (coffe) => coffe.id < 5
-      );
+      const selectedCoffees = [
+        resp.data[0],
+        resp.data[1],
+        resp.data[2],
+        resp.data[3],
+      ];
       setData(selectedCoffees);
     } catch (error) {
       console.error(error);
@@ -31,7 +34,7 @@ export const Selection: FC = () => {
     <div className="selection">
       <div className="selection-title fade-up">
         <h1>GabsCS' featured coffee</h1>
-        <Separator color="#3c2828" />
+        <Separator color="var( --darker-brown)" />
       </div>
 
       <Button text="Shop now!" />

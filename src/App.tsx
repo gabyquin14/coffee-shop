@@ -7,6 +7,8 @@ import Navigation from "./components/navigation";
 import Footer from "./components/footer";
 import Details from "./pages/details";
 import Cart from "./pages/cart";
+import Login from "./pages/login";
+import CheckoutResponse from "./pages/checkout-response";
 
 export const App: FC = () => {
   const location = useLocation();
@@ -32,6 +34,9 @@ export const App: FC = () => {
         <Route path="/shop" element={<Shop />} />
         <Route path="/shop/details/:id" element={<Details />} />
         <Route path="/cart" element={<Cart />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/success" element={<CheckoutResponse type="success" />} />
+        <Route path="/cancel" element={<CheckoutResponse type="cancel" />} />
       </Routes>
 
       <Footer />

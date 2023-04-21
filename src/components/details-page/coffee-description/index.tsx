@@ -85,8 +85,8 @@ export const CoffeeDescription: FC<Props> = ({ data }) => {
               </p>
               <h2>The ingredients that makes this nice coffee:</h2>
               <ul className="description-section-ingredients">
-                {data.ingredients.map((ingredient) => (
-                  <li key={ingredient}>{ingredient}</li>
+                {data.ingredients.map((ingredient, index) => (
+                  <li key={`${ingredient}-${index}`}>{ingredient}</li>
                 ))}
               </ul>
             </div>
@@ -102,13 +102,13 @@ export const CoffeeDescription: FC<Props> = ({ data }) => {
       )}
       <div className="coffee-details-separator"></div>
       <div className="coffee-details-social-media">
-        <a href="#">
+        <a href="https://bit.ly/3KPniFg">
           <FaFacebookF />
         </a>
-        <a href="#">
+        <a href="https://bit.ly/3KPniFg">
           <FaTwitter />
         </a>
-        <a href="#">
+        <a href="https://bit.ly/3KPniFg">
           <FaTiktok />
         </a>
       </div>

@@ -23,17 +23,17 @@ export const Footer: FC = () => {
           <div className="social-media">
             <ul>
               <li>
-                <a href="#">
+                <a href="https://bit.ly/3mOQDrv">
                   <AiOutlineTwitter />
                 </a>
               </li>
               <li>
-                <a href="#">
+                <a href="https://bit.ly/3mOQDrv">
                   <FaFacebookF />
                 </a>
               </li>
               <li>
-                <a href="#">
+                <a href="https://bit.ly/3mOQDrv">
                   <AiFillYoutube />
                 </a>
               </li>
@@ -50,16 +50,16 @@ export const Footer: FC = () => {
           </div>
           <ul className={dropdown === 1 ? "active" : ""}>
             <li>
-              <a href="#about">Home</a>
+              <a href="https://bit.ly/3mOQDrv">Home</a>
             </li>
             <li>
-              <a href="#">Our coffees</a>
+              <a href="https://bit.ly/3mOQDrv">Our coffees</a>
             </li>
             <li>
-              <a href="#">Contact</a>
+              <a href="https://bit.ly/3mOQDrv">Contact</a>
             </li>
             <li>
-              <a href="#">Help</a>
+              <a href="https://bit.ly/3mOQDrv">Help</a>
             </li>
           </ul>
         </div>
@@ -73,16 +73,16 @@ export const Footer: FC = () => {
           </div>
           <ul className={dropdown === 2 ? "active" : ""}>
             <li>
-              <a href="#about">Galleria</a>
+              <a href="https://bit.ly/3KPniFg">Galleria</a>
             </li>
             <li>
-              <a href="#">Our shop💕</a>
+              <a href="https://bit.ly/3KPniFg">Our shop💕</a>
             </li>
             <li>
-              <a href="#">Privacy</a>
+              <a href="https://bit.ly/3KPniFg">Privacy</a>
             </li>
             <li>
-              <a href="#">Terms and Conditions</a>
+              <a href="https://bit.ly/3KPniFg">Terms and Conditions</a>
             </li>
           </ul>
         </div>

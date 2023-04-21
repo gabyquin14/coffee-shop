@@ -1,0 +1,38 @@
+.login {
+  min-height: 55vh;
+  padding: 6rem 6rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  row-gap: 4rem;
+}
+
+.login-buttons-container {
+  display: flex;
+  column-gap: 6rem;
+}
+
+.login button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 2rem;
+  outline: none;
+  padding: 2rem;
+  background-color: transparent;
+  border: 0.1rem solid var(--darker-brown);
+  font-size: 2rem;
+  border-radius: 1rem;
+  letter-spacing: 0.1rem;
+}
+
+.logout-button {
+  background-color: var(--darker-brown) !important;
+  color: var(--light-bg);
+  border: none;
+}
+
+.login-button svg {
+  font-size: 3rem;
+}

@@ -61,7 +61,7 @@ export const Reviews: FC = () => {
     <div className="reviews">
       <div className="reviews-presentation fade-up">
         <h1>Reviews</h1>
-        <Separator color="#3c2828" />
+        <Separator color="var( --darker-brown)" />
       </div>
       <div className="bg-wave"> </div>
       <Swiper

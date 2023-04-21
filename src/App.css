@@ -1,3 +1,20 @@
 .App {
   text-align: center;
 }
+
+.Toastify__toast-container {
+  font-size: 2rem;
+}
+
+.hidden {
+  overflow: hidden;
+}
+
+button,
+a {
+  cursor: pointer;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  background-color: transparent;
+}

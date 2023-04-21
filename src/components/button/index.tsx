@@ -4,10 +4,15 @@ import Separator from "../separator";
 
 interface Props {
   text: string;
+  clickFunction?: () => void;
 }
 
-export const Button: FC<Props> = ({ text }) => {
-  return <button className="main-btn">{text}</button>;
+export const Button: FC<Props> = ({ text, clickFunction }) => {
+  return (
+    <button className="main-btn" onClick={clickFunction}>
+      {text}
+    </button>
+  );
 };
 
 export default Button;

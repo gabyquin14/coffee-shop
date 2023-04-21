@@ -1,0 +1,42 @@
+.checkout {
+  min-height: 70vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  row-gap: 4rem;
+}
+
+.checkout-back-button {
+  width: 30rem;
+  border-radius: 1rem;
+  padding: 2rem;
+  background-color: var(--darker-brown);
+}
+
+.checkout-back-button a {
+  color: var(--light-brown);
+  text-decoration: none;
+  font-size: 2.4rem;
+}
+
+.checkout-content {
+  color: var(--darker-brown);
+  display: flex;
+  flex-direction: column;
+  row-gap: 2rem;
+}
+
+.checkout-content h1,
+.checkout-content span {
+  margin: 0;
+}
+
+.checkout-content h1 {
+  font-size: 4rem;
+}
+
+.checkout-content span {
+  font-size: 2.4rem;
+}

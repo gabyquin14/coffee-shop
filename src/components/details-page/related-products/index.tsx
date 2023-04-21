@@ -31,7 +31,7 @@ export const RelatedProducts: FC = () => {
         }}
       >
         {data?.map((coffee, id) => (
-          <SwiperSlide key={id}>
+          <SwiperSlide key={coffee.id}>
             <SelectionCard coffee={coffee} />
           </SwiperSlide>
         ))}

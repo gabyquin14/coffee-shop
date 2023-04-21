@@ -7,8 +7,10 @@ import {
   AiOutlineMinus,
 } from "react-icons/ai";
 import Crumbs from "../../crumbs";
-import axios from "axios";
 import { Coffee } from "../../../types/types";
+import { ToastContainer, toast } from "react-toastify";
+import { useAppDispatch } from "../../../redux/store";
+import { addToCart } from "../../../redux/cartSlice";
 
 interface Props {
   data?: Coffee;
@@ -17,7 +19,22 @@ interface Props {
 
 export const CoffeeDetails: FC<Props> = ({ data, setId }) => {
   const { id } = useParams();
-
+  const [baseQuantity, setBaseQuantity] = useState(1);
+  const dispatch = useAppDispatch();
+  const dispatchCart = () => {
+    data &&
+      dispatch(
+        addToCart({
+          id: data.id,
+          name: data.name,
+          image: data.image,
+          price: data.price,
+          quantity: baseQuantity,
+          description: data.description,
+        })
+      );
+    toast.success(`${data?.name} coffee is added`);
+  };
   useEffect(() => {
     id && setId(id as string);
   }, []);
@@ -52,7 +69,12 @@ export const CoffeeDetails: FC<Props> = ({ data, setId }) => {
               <h3 className="coffee-details-quantity-title">Quantity:</h3>
               <div className="coffee-details-cart">
                 <div className="coffee-details-quantity-container">
-                  <button className="coffee-details-decrement">
+                  <button
+                    className="coffee-details-decrement"
+                    onClick={() =>
+                      setBaseQuantity(baseQuantity === 1 ? 1 : baseQuantity - 1)
+                    }
+                  >
                     <AiOutlineMinus />
                   </button>
                   <input
@@ -60,14 +82,20 @@ export const CoffeeDetails: FC<Props> = ({ data, setId }) => {
                     className="coffee-details-quantity"
                     min={1}
                     max={99}
-                    defaultValue={1}
+                    value={baseQuantity}
                   />
-                  <button className="coffee-details-increment">
+                  <button
+                    className="coffee-details-increment"
+                    onClick={() => setBaseQuantity(baseQuantity + 1)}
+                  >
                     <AiOutlinePlus />
                   </button>
                 </div>
 
-                <button className="coffee-details-add-to-cart">
+                <button
+                  className="coffee-details-add-to-cart"
+                  onClick={dispatchCart}
+                >
                   <>Add to cart</>
                   <AiOutlineShoppingCart />
                 </button>
@@ -78,6 +106,18 @@ export const CoffeeDetails: FC<Props> = ({ data, setId }) => {
           </div>
         </section>
       )}
+      <ToastContainer
+        position="top-left"
+        autoClose={2000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="dark"
+      />
     </>
   );
 };

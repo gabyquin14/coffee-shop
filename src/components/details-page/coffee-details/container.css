@@ -1,7 +1,7 @@
 .coffee-details {
   padding: 2rem;
   margin-top: 6rem;
-  color: #3c2828;
+  color: var(--darker-brown);
 }
 
 .coffee-details-img {
@@ -25,12 +25,12 @@
 
 .coffee-details-price {
   font-size: 2rem;
-  color: #658f51;
+  color: var(--accent);
 }
 
 .coffee-details-description {
   font-size: 1.8rem;
-  color: #66574d;
+  color: var(--lighter-text);
 }
 
 .coffee-details-separator {
@@ -58,6 +58,7 @@
   column-gap: 0.5rem;
   padding: 1rem;
   font-size: 2rem;
+  width: fit-content;
 }
 
 .coffee-details-quantity-container button,
@@ -68,6 +69,7 @@
   background-color: transparent;
   border: none;
   text-align: center;
+  cursor: pointer;
 }
 
 .coffee-details-add-to-cart {
@@ -76,8 +78,8 @@
   font-size: 2rem;
   text-align: center;
   width: 100%;
-  background-color: #658f51;
-  color: #fbf0e7;
+  background-color: var(--accent);
+  color: var(--light-bg);
   white-space: nowrap;
   display: flex;
   align-items: center;
@@ -91,8 +93,8 @@
   font-size: 2rem;
   text-align: center;
   width: 100%;
-  background-color: #A78D7B;
-  color: #fbf0e7;
+  background-color: var(--light-brown);
+  color: var(--light-bg);
   white-space: nowrap;
   display: flex;
   align-items: center;

@@ -29,7 +29,7 @@
   width: 80%;
   transform: translate(-50%, -50%) !important;
   z-index: 2;
-  background-color: #fbf0e7;
+  background-color: var(--light-bg);
   border-radius: 1rem;
   padding: 2rem;
   box-shadow: 0px 0px 24px 13px rgba(0, 0, 0, 0.06)
@@ -88,8 +88,8 @@
   }
 
   .latte-art {
-    border-top: 1rem solid #fbf0e7;
-    border-right: 1rem solid #fbf0e7;
+    border-top: 1rem solid var(--light-bg);
+    border-right: 1rem solid var(--light-bg);
     width: 25%;
     height: 35%;
     border-radius: 0;
@@ -121,14 +121,14 @@
   .about-description h3 {
     margin: 0 0 1rem;
     font-size: 3rem;
-    color: #3c2828;
+    color: var(--darker-brown);
   }
 
   .about-description p {
     font-size: 1.8rem;
     margin: 0;
     max-width: 40rem;
-    color: #66574d;
+    color: var(--lighter-text);
   }
 }
 
@@ -136,7 +136,7 @@
   .about-description h3 {
     margin: 0 0 1rem;
     font-size: 4.5rem;
-    color: #3c2828;
+    color: var(--darker-brown);
     width: 50%;
   }
 
@@ -145,6 +145,6 @@
     margin: 0;
     width: 70%;
     max-width: unset;
-    color: #66574d;
+    color: var(--lighter-text);
   }
 }
