@@ -4,16 +4,18 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
   row-gap: 4rem;
 }
 
 .login-buttons-container {
   display: flex;
+  align-items: center;
+  flex-direction: column;
   column-gap: 6rem;
+  row-gap: 2rem;
 }
 
-.login button {
+.login-button {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -25,14 +27,16 @@
   font-size: 2rem;
   border-radius: 1rem;
   letter-spacing: 0.1rem;
-}
-
-.logout-button {
-  background-color: var(--darker-brown) !important;
-  color: var(--light-bg);
-  border: none;
+  white-space: nowrap;
 }
 
 .login-button svg {
   font-size: 3rem;
+}
+
+@media screen and (min-width:800px) {
+  .login-buttons-container {
+    flex-direction: row;
+    row-gap: 6rem;
+  }
 }

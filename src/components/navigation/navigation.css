@@ -49,6 +49,7 @@
 }
 
 .navigation-links.active {
+  padding: 2rem 0 3rem 0;
   transition: all 0.8s cubic-bezier(0.64, 0.04, 0.25, 0.87);
 }
 
@@ -87,7 +88,8 @@
   color: var(--light-bg);
 }
 
-.navigation.active .navigation-link span {
+.navigation.active .navigation-link span,
+.navigation.active .navigation-link h2 {
   color: var(--darker-brown);
 }
 
@@ -146,8 +148,6 @@
     /*top, left, right, bottom sets to 0*/
     background-color: transparent;
   }
-
-
 }
 
 @media screen and (min-width: 800px) {
@@ -173,7 +173,8 @@
     height: auto;
   }
 
-  .navigation-link a {
+  .navigation-link a,
+  .navigation-link h2 {
     color: var(--light-bg);
     text-decoration: none;
     font-size: 3rem;

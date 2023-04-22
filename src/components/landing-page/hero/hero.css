@@ -36,32 +36,6 @@
   margin: 1rem 0 3rem;
 }
 
-.hero-content button {
-  cursor: pointer;
-  font-size: 1.8rem;
-  background-color: transparent;
-  outline: none;
-  border: 0.2rem solid var(--light-bg);
-  padding: 1rem;
-  font-weight: 500;
-  border-radius: 0.5rem;
-  transition: all 0.2s ease-in-out;
-}
-
-.hero-content button a {
-  color: var(--light-bg);
-  text-decoration: none;
-}
-
-.hero-content button:hover {
-  background-color: var(--light-bg);
-  color: rgb(60, 40, 40);
-}
-
-.hero-content button:hover a {
-  color: rgb(60, 40, 40);
-}
-
 @media screen and (min-width: 500px) {
   .hero-content {
     padding: 10rem;

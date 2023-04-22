@@ -1,14 +1,16 @@
 import React, { FC } from "react";
 import "./checkout-response.css";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
+import FilledButton from "../../components/button/filledButton";
 
 interface Props {
   type: string;
 }
 
 const CheckoutResponse: FC<Props> = ({ type }) => {
+  const navigate = useNavigate();
   return (
-    <section className="checkout">
+    <section className="checkout fade-up">
       {type === "success" ? (
         <div className="checkout-content">
           <h1>Thanks for shopping with us!</h1>
@@ -20,9 +22,7 @@ const CheckoutResponse: FC<Props> = ({ type }) => {
           <span>Please try again!</span>
         </div>
       )}
-      <button className="checkout-back-button">
-        <NavLink to={"/"}>Go back to store</NavLink>
-      </button>
+      <FilledButton text="Go back to store" onclick={() => navigate("/")} />
     </section>
   );
 };

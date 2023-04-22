@@ -1,10 +1,11 @@
-import React, { FC } from "react";
+import { FC } from "react";
 import "./selection-card.css";
 import { Coffee } from "../../../types/types";
 import { NavLink } from "react-router-dom";
 import { useAppDispatch } from "../../../redux/store";
 import { addToCart } from "../../../redux/cartSlice";
-import { ToastContainer, toast } from "react-toastify";
+import { toast } from "react-toastify";
+import FilledButton from "../../button/filledButton";
 
 interface Props {
   coffee: Coffee;
@@ -36,7 +37,7 @@ export const SelectionCard: FC<Props> = ({ coffee }) => {
           </div>
         </div>
       </NavLink>
-      <button onClick={dispatchCart}>Add to cart</button>
+      <FilledButton text="Add to cart" type="accent" onclick={dispatchCart} />
     </article>
   );
 };

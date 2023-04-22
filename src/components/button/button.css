@@ -1,4 +1,5 @@
-.main-btn {
+/* outlined button */
+.outlined-btn {
   margin-top: 2rem;
   cursor: pointer;
   font-size: 1.6rem;
@@ -9,25 +10,79 @@
   padding: 1rem;
   font-weight: 500;
   border-radius: 0.5rem;
+  white-space: nowrap;
   transition: all 0.2s ease-in-out;
 }
 
-.main-btn a {
-  color: var(--darker-brown);
-  text-decoration: none;
-}
-
-.main-btn:hover {
+.outlined-btn:hover {
   background-color: var(--darker-brown);
   color: var(--light-bg);
 }
 
-.main-btn:hover a {
+.outlined-btn.light {
+  border: 0.2rem solid var(--light-bg);
   color: var(--light-bg);
 }
 
+.outlined-btn.light:hover {
+  background-color: var(--light-bg);
+  color: var(--darker-brown);
+}
+
+.outlined-btn:hover {
+  background-color: var(--darker-brown);
+  color: var(--light-bg);
+}
+
+/*Filled Button*/
+
+.filled-btn {
+  font-size: 2.5rem;
+  background-color: var(--darker-brown);
+  color: var(--light-bg);
+  width: 100%;
+  border-radius: 1rem;
+  outline: none;
+  border: none;
+  padding: 2rem;
+  white-space: nowrap;
+  transition: all 0.3s ease;
+}
+
+.filled-btn:hover {
+  background-color: var(--darker-brown-hover);
+}
+
+.filled-btn.accent {
+  background-color: var(--accent);
+  color: var(--light-bg);
+}
+
+.filled-btn.accent:hover {
+  background-color: var(--dark-accent);
+}
+
+.filled-btn.light {
+  background-color: var(--light-brown);
+  color: var(--light-bg);
+}
+
+.filled-btn.light:hover {
+  background-color: var(--light-brown-hover);
+}
+
+.filled-btn.danger {
+  width: fit-content;
+  background-color: var(--danger);
+  color: var(--light-bg);
+}
+
+.filled-btn.danger:hover {
+  background-color: var(--danger-hover);
+}
+
 @media screen and (min-width: 500px) {
-  .main-btn {
+  .outlined-btn {
     font-size: 2.5rem;
   }
 }

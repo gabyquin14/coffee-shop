@@ -4,8 +4,13 @@
   --light-pink: #f3dece;
   --opaque-light-brown: #f7eae0;
   --light-brown: #A78D7B;
+  --light-brown-hover: #9b8271;
+  --danger: #db5a5a;
+  --danger-hover: #b13535;
   --wrapper-bg: #00000080;
   --darker-brown: #3c2828;
+  --darker-brown-hover: #473131;
   --lighter-text: #947272;
   --accent: #528e52;
+  --dark-accent: #427642;
 }

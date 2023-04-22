@@ -1,7 +1,4 @@
-import React, { FC, useEffect, useState } from "react";
-import useGetItems from "../../utils/useGetItems";
-import { TbTrash } from "react-icons/tb";
-import { AiOutlineMinus, AiOutlinePlus } from "react-icons/ai";
+import { FC } from "react";
 import { HiOutlineX } from "react-icons/hi";
 import CartPopUpCard from "./cart-card";
 import "./cart-popup.css";
@@ -9,6 +6,7 @@ import { useAppSelector } from "../../redux/store";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import checkout from "../../utils/checkout";
+import FilledButton from "../button/filledButton";
 
 interface Props {
   showCartHandler: () => void;
@@ -56,8 +54,16 @@ export const CartPopUp: FC<Props> = ({ showCartHandler, showCart }) => {
             <span>$105.00</span>
           </div>
           <div className="cart-popup-footer-actions">
-            <button onClick={handleViewCart}>View Cart</button>
-            <button onClick={handleCheckout}>Check out</button>
+            <FilledButton
+              text="View Cart"
+              type="dark"
+              onclick={handleViewCart}
+            />
+            <FilledButton
+              text="Check out"
+              type="light"
+              onclick={handleCheckout}
+            />
           </div>
         </div>
       </div>

@@ -1,9 +1,11 @@
 import React, { FC } from "react";
 import "./hero.css";
 import Separator from "../../separator";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
+import FilledButton from "../../button";
 
 export const Hero: FC = () => {
+  const navigate = useNavigate();
   return (
     <section className="hero" id="hero">
       <div className="hero-wrapper">
@@ -16,9 +18,11 @@ export const Hero: FC = () => {
             explicabo, facere porro, pariatur, quos similique dicta eaque
             tenetur laudantium cumque numquam! Commodi.
           </p>
-          <button>
-            <NavLink to={"/shop"}>Shop now!</NavLink>
-          </button>
+          <FilledButton
+            text="Shop now!"
+            type="light"
+            clickFunction={() => navigate("/shop")}
+          />
         </div>
       </div>
     </section>

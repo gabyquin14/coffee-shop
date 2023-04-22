@@ -1,18 +1,21 @@
-import React, { FC } from "react";
+import { FC } from "react";
 import "./button.css";
-import Separator from "../separator";
 
 interface Props {
   text: string;
+  type?: string;
   clickFunction?: () => void;
 }
 
-export const Button: FC<Props> = ({ text, clickFunction }) => {
+export const OutlinedButton: FC<Props> = ({ text, clickFunction, type }) => {
   return (
-    <button className="main-btn" onClick={clickFunction}>
+    <button
+      className={`outlined-btn ${type === "light" ? "light" : ""}`}
+      onClick={clickFunction}
+    >
       {text}
     </button>
   );
 };
 
-export default Button;
+export default OutlinedButton;

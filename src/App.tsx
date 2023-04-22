@@ -1,6 +1,6 @@
-import React, { FC, useEffect, useRef } from "react";
+import { FC, useEffect } from "react";
 import "./App.css";
-import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
 import Home from "./pages/home";
 import Shop from "./pages/shop";
 import Navigation from "./components/navigation";
@@ -9,10 +9,14 @@ import Details from "./pages/details";
 import Cart from "./pages/cart";
 import Login from "./pages/login";
 import CheckoutResponse from "./pages/checkout-response";
+import { useAppDispatch } from "./redux/store";
+import { fetchCoffees } from "./redux/infoSlice";
 
 export const App: FC = () => {
   const location = useLocation();
+  const dispatch = useAppDispatch();
   useEffect(() => {
+    dispatch(fetchCoffees());
     const fadeUpObserver = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
@@ -26,6 +30,7 @@ export const App: FC = () => {
       fadeUpObserver.observe(el);
     });
   }, [location.pathname]);
+
   return (
     <div className="App">
       <Navigation />

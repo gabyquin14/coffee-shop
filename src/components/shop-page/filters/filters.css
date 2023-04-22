@@ -18,10 +18,6 @@
   column-gap: 2rem;
 }
 
-.sort {
-  display: none;
-}
-
 .filters-dropdown {
   max-width: 18rem;
   min-width: 18rem;
@@ -155,6 +151,7 @@
 .filters-dropdown-option {
   list-style-type: none;
   cursor: pointer;
+  text-align: left;
 }
 
 @media screen and (min-width: 750px) {

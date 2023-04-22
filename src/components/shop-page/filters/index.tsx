@@ -1,11 +1,19 @@
-import React, { FC, useState } from "react";
+import { FC, useState } from "react";
 import "./filters.css";
 import { RiCloseFill } from "react-icons/ri";
 import { GoChevronDown } from "react-icons/go";
 import { TbLayoutGrid, TbCircuitChangeover } from "react-icons/tb";
 import { RxMagnifyingGlass } from "react-icons/rx";
+import { useAppDispatch } from "../../../redux/store";
+import {
+  alphabeticSort,
+  priceLowToHighSort,
+  priceHighToLowSort,
+  fetchCoffees,
+} from "../../../redux/infoSlice";
 
 export const Filters: FC = () => {
+  const dispatch = useAppDispatch();
   const [dropdown, setDropdown] = useState(false);
   const [filters, setFilters] = useState(false);
 
@@ -43,31 +51,42 @@ export const Filters: FC = () => {
           <h1>Coffees Filters</h1>
           <h3>Filter by:</h3>
           <ul className="filters-coffee-options flex-center">
-            <li className="filters-coffee-option">Best sellers</li>
-            <li className="filters-coffee-option">All</li>
+            <li
+              className="filters-coffee-option"
+              onClick={() => window.location.assign("https://bit.ly/3mOQDrv")}
+            >
+              Best sellers
+            </li>
+            <li
+              className="filters-coffee-option"
+              onClick={() => dispatch(fetchCoffees())}
+            >
+              All
+            </li>
           </ul>
           <h3 className="sort">Sort by:</h3>
-          <ul
-            className={`filters-coffee-options sort flex-center ${
-              dropdown ? "active" : ""
-            }`}
-          >
-            <li className="filters-coffee-option">Alphabetic</li>
-            <li className="filters-coffee-option">Price: highest to lowest</li>
-            <li className="filters-coffee-option">Price: lowest to highest</li>
+          <ul className="filters-coffee-options sort flex-center">
+            <li
+              className="filters-coffee-option"
+              onClick={() => dispatch(alphabeticSort())}
+            >
+              Alphabetic
+            </li>
+            <li
+              className="filters-coffee-option"
+              onClick={() => dispatch(priceHighToLowSort())}
+            >
+              Price: highest to lowest
+            </li>
+            <li
+              className="filters-coffee-option"
+              onClick={() => dispatch(priceLowToHighSort())}
+            >
+              Price: lowest to highest
+            </li>
           </ul>
         </div>
       </div>
-
-      <ul
-        className={`filters-dropdown-content flex-center ${
-          dropdown ? "active" : ""
-        }`}
-      >
-        <li className="filters-dropdown-option">Alphabetic</li>
-        <li className="filters-dropdown-option">Price: highest to lowest</li>
-        <li className="filters-dropdown-option">Price: lowest to highest</li>
-      </ul>
     </aside>
   );
 };

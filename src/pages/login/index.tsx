@@ -11,6 +11,7 @@ import { toast, ToastContainer } from "react-toastify";
 import { useAppDispatch } from "../../redux/store";
 import { addUser, removeUser } from "../../redux/cartSlice";
 import { useNavigate } from "react-router-dom";
+import FilledButton from "../../components/button/filledButton";
 
 export const Login: FC = () => {
   const navigate = useNavigate();
@@ -48,13 +49,11 @@ export const Login: FC = () => {
   };
   return (
     <div className="login">
-      <div className="login-buttons-container">
+      <div className="login-buttons-container fade-up">
         <button className="login-button" onClick={handleGoogleLogin}>
           <FcGoogle /> <span>Sign in with Google</span>
         </button>
-        <button className="logout-button" onClick={handleSignOut}>
-          Log out
-        </button>
+        <FilledButton text="Log out" onclick={handleSignOut} />
       </div>
       <ToastContainer
         position="top-left"

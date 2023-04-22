@@ -21,6 +21,7 @@ export const cartSlice = createSlice({
   name: "cart",
   initialState,
   reducers: {
+    /*Cart reducers */
     addToCart: (state, action: PayloadAction<CoffeeCart>) => {
       const item = state.productData.find(
         (item) => item.id === action.payload.id
@@ -56,6 +57,7 @@ export const cartSlice = createSlice({
         item.quantity--;
       }
     },
+    /*User reducers */
     addUser: (state, action: PayloadAction<userInterface>) => {
       state.userInfo = action.payload;
     },

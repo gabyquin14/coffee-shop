@@ -1,13 +1,13 @@
-import React, { FC, useEffect, useState } from "react";
+import { FC } from "react";
 import "./related-products.css";
-import useGetItems from "../../../utils/useGetItems";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import { Navigation, Pagination } from "swiper";
 import SelectionCard from "../../shop-page/selection-card";
+import { useAppSelector } from "../../../redux/store";
 
 export const RelatedProducts: FC = () => {
-  const data = useGetItems();
+  const coffees = useAppSelector((state) => state.info.coffees);
 
   return (
     <div className="related-products">
@@ -30,7 +30,7 @@ export const RelatedProducts: FC = () => {
           },
         }}
       >
-        {data?.map((coffee, id) => (
+        {coffees?.map((coffee) => (
           <SwiperSlide key={coffee.id}>
             <SelectionCard coffee={coffee} />
           </SwiperSlide>

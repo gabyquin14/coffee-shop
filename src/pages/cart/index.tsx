@@ -6,6 +6,7 @@ import { ToastContainer, toast } from "react-toastify";
 import { useAppDispatch } from "../../redux/store";
 import { resetCart } from "../../redux/cartSlice";
 import { checkout } from "../../utils/checkout";
+import FilledButton from "../../components/button/filledButton";
 
 export const Cart: FC = () => {
   const productData = useAppSelector((state) => state.cart.productData);
@@ -38,17 +39,22 @@ export const Cart: FC = () => {
 
   return (
     <div className="cart">
-      <div className="cart-items">
+      <div className="cart-items fade-up">
         <h1 className="cart-items-title">Shopping cart</h1>
-        {productData.map((coffee) => (
-          <CartCard coffee={coffee} key={coffee.id} />
-        ))}
-        <button className="cart-items-reset-button" onClick={handleResetCart}>
-          Reset Cart
-        </button>
+        <div className="cart-coffees-container">
+          {productData.map((coffee) => (
+            <CartCard coffee={coffee} key={coffee.id} />
+          ))}
+        </div>
+
+        <FilledButton
+          text="Reset Cart"
+          type="danger"
+          onclick={handleResetCart}
+        />
       </div>
 
-      <div className="cart-total-container">
+      <div className="cart-total-container fade-up">
         <div className="cart-total-content">
           <h2>Cart totals</h2>
           <p className="cart-total-subtotal">
@@ -66,9 +72,11 @@ export const Cart: FC = () => {
         <p className="cart-total">
           Total <span>${totalAmmount}.00</span>
         </p>
-        <button className="cart-checkout" onClick={handleCheckout}>
-          Proceed to checkout
-        </button>
+        <FilledButton
+          text="Proceed to checkout"
+          type="light"
+          onclick={handleCheckout}
+        />
       </div>
       <ToastContainer
         position="top-left"

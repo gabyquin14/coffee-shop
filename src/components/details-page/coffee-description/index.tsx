@@ -4,10 +4,10 @@ import { Coffee } from "../../../types/types";
 import { FaFacebookF, FaTwitter, FaTiktok } from "react-icons/fa";
 
 interface Props {
-  data?: Coffee;
+  coffee?: Coffee;
 }
 
-export const CoffeeDescription: FC<Props> = ({ data }) => {
+export const CoffeeDescription: FC<Props> = ({ coffee }) => {
   const [option, setOption] = useState("description");
   return (
     <section className="coffee-description">
@@ -71,7 +71,7 @@ export const CoffeeDescription: FC<Props> = ({ data }) => {
           </div>
         </section>
       )}
-      {option === "additional" && data && (
+      {option === "additional" && coffee && (
         <section className="description-section">
           <div className="description-section-container">
             <img src="https://i.ibb.co/bgbCfqD/coffee-and-plants.jpg" alt="" />
@@ -85,7 +85,7 @@ export const CoffeeDescription: FC<Props> = ({ data }) => {
               </p>
               <h2>The ingredients that makes this nice coffee:</h2>
               <ul className="description-section-ingredients">
-                {data.ingredients.map((ingredient, index) => (
+                {coffee.ingredients.map((ingredient, index) => (
                   <li key={`${ingredient}-${index}`}>{ingredient}</li>
                 ))}
               </ul>

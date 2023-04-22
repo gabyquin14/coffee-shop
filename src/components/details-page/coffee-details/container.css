@@ -2,6 +2,7 @@
   padding: 2rem;
   margin-top: 6rem;
   color: var(--darker-brown);
+  min-height: 60vh;
 }
 
 .coffee-details-img {
