@@ -3,6 +3,26 @@
   padding: 2rem;
 }
 
+.no-coffee-found {
+  min-height: 100vh;
+  padding: 2rem;
+  color: var(--darker-brown);
+}
+
+.no-coffee-found h1,
+.no-coffee-found span {
+  margin: 0;
+}
+
+.no-coffee-found h1 {
+  font-size: 3rem;
+  margin-top: 10rem;
+}
+
+.no-coffee-found span {
+  font-size: 2em;
+}
+
 .selection-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));

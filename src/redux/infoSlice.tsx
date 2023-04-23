@@ -7,6 +7,10 @@ interface infoState {
   status: "idle" | "loading" | "succeeded" | "failed";
   error: string | null;
 }
+interface statusInterface {
+  status: "idle" | "loading" | "succeeded" | "failed";
+  error: string | null;
+}
 
 const initialState: infoState = {
   coffees: [],
@@ -17,6 +21,7 @@ const initialState: infoState = {
 export const fetchCoffees = createAsyncThunk("info/fetchCoffees", async () => {
   const baseUrl = "https://coffee-api-gabyquin14.onrender.com/api/coffees";
   const resp = await axios.get(baseUrl);
+  console.log(resp);
   return resp.data;
 });
 
@@ -55,6 +60,13 @@ export const infoSlice = createSlice({
         return 0;
       });
     },
+    searchItemByName: (state, action: PayloadAction<Coffee>) => {
+      state.coffees = [action.payload];
+    },
+    changeStatus: (state, action: PayloadAction<statusInterface>) => {
+      state.status = action.payload.status;
+      state.error = action.payload.error || null;
+    },
   },
   extraReducers: (builder) => {
     builder
@@ -72,6 +84,11 @@ export const infoSlice = createSlice({
   },
 });
 
-export const { alphabeticSort, priceLowToHighSort, priceHighToLowSort } =
-  infoSlice.actions;
+export const {
+  alphabeticSort,
+  priceLowToHighSort,
+  priceHighToLowSort,
+  searchItemByName,
+  changeStatus,
+} = infoSlice.actions;
 export default infoSlice.reducer;

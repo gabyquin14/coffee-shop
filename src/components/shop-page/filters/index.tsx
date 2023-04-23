@@ -4,18 +4,40 @@ import { RiCloseFill } from "react-icons/ri";
 import { GoChevronDown } from "react-icons/go";
 import { TbLayoutGrid, TbCircuitChangeover } from "react-icons/tb";
 import { RxMagnifyingGlass } from "react-icons/rx";
-import { useAppDispatch } from "../../../redux/store";
+import { useAppDispatch, useAppSelector } from "../../../redux/store";
 import {
   alphabeticSort,
   priceLowToHighSort,
   priceHighToLowSort,
   fetchCoffees,
+  searchItemByName,
+  changeStatus,
 } from "../../../redux/infoSlice";
+import axios from "axios";
 
 export const Filters: FC = () => {
   const dispatch = useAppDispatch();
-  const [dropdown, setDropdown] = useState(false);
   const [filters, setFilters] = useState(false);
+  const [showSearchbar, setShowSearchbar] = useState(false);
+  const [coffeeName, setCoffeeName] = useState("");
+
+  const getCoffee = async (event: React.KeyboardEvent<HTMLInputElement>) => {
+    const name = coffeeName.charAt(0).toUpperCase() + coffeeName.slice(1);
+    if (event.key === "Enter") {
+      try {
+        const resp = axios.get(
+          `https://coffee-api-gabyquin14.onrender.com/api/coffees/name/${name}`
+        );
+        const response = await resp;
+        dispatch(changeStatus({ status: "succeeded", error: "" }));
+        dispatch(searchItemByName(response.data));
+        setShowSearchbar(false);
+      } catch (error) {
+        dispatch(changeStatus({ status: "failed", error: "Error" }));
+        console.log(error);
+      }
+    }
+  };
 
   return (
     <aside className="filters">
@@ -28,12 +50,26 @@ export const Filters: FC = () => {
             <TbCircuitChangeover />
             <h3>Filter</h3>
           </div>
-          <GoChevronDown onClick={() => setDropdown(!dropdown)} />
+          <GoChevronDown />
         </div>
         <div className="filters-separator" />
         <div className="filters-layout flex-center">
           <TbLayoutGrid />
-          <RxMagnifyingGlass />
+          <RxMagnifyingGlass
+            className="filter-search-icon"
+            onClick={() => setShowSearchbar(true)}
+          />
+          <div
+            className={`filters-search-name ${showSearchbar ? "active" : ""}`}
+          >
+            <RxMagnifyingGlass />
+            <input
+              type="text"
+              placeholder="Search..."
+              onKeyDown={getCoffee}
+              onChange={(e) => setCoffeeName(e.target.value)}
+            />
+          </div>
         </div>
       </div>
 

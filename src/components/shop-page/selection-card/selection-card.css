@@ -6,7 +6,6 @@
 article a {
   text-decoration: none;
   color: var(--darker-brown);
-  height: 100%;
 }
 
 .selection-card-content {
