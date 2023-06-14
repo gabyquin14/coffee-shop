@@ -10,7 +10,7 @@ interface Props {
 export const Card: FC<Props> = ({ product }) => {
   return (
     <div className="card">
-      <NavLink to={`${product.id}`}>
+      <NavLink to={`/shop/details/${product.id}`}>
         <img
           src={product.image}
           alt="Close up of a coffee"

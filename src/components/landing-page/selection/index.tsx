@@ -53,7 +53,7 @@ export const Selection: FC = () => {
           <LoadingScreen loading={status === "loading"} />
         </div>
       ) : (
-        <div>
+        <div className="selection">
           <div
             className="selection-title fade-up"
             ref={(el) => (fadeUpRefs.current[0] = el)}

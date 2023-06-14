@@ -4,7 +4,7 @@ import { RiCloseFill } from "react-icons/ri";
 import { GoChevronDown } from "react-icons/go";
 import { TbLayoutGrid, TbCircuitChangeover } from "react-icons/tb";
 import { RxMagnifyingGlass } from "react-icons/rx";
-import { useAppDispatch, useAppSelector } from "../../../redux/store";
+import { useAppDispatch } from "../../../redux/store";
 import {
   alphabeticSort,
   priceLowToHighSort,

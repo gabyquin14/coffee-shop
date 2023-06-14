@@ -80,6 +80,10 @@
   margin: 0;
 }
 
+.navigation-link a:last-child {
+  margin-right: 2rem;
+}
+
 .navigation-link span {
   position: absolute;
   top: -1rem;

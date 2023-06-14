@@ -100,7 +100,10 @@ export const CoffeeDescription: FC<Props> = ({ coffee }) => {
           </h1>
         </section>
       )}
-      <div className="coffee-details-separator"></div>
+      <div
+        className="coffee-details-separator"
+        style={{ marginTop: "4rem" }}
+      ></div>
       <div className="coffee-details-social-media">
         <a href="https://bit.ly/3KPniFg">
           <FaFacebookF />
