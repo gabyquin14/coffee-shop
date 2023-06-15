@@ -21,7 +21,6 @@ const initialState: infoState = {
 export const fetchCoffees = createAsyncThunk("info/fetchCoffees", async () => {
   const baseUrl = "https://coffee-api-gabyquin14.onrender.com/api/coffees";
   const resp = await axios.get(baseUrl);
-  console.log(resp);
   return resp.data;
 });
 

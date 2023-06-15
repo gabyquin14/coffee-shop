@@ -9,7 +9,7 @@ export const checkout = async (
 ) => {
   return new Promise((resolve, reject) => {
     if (userInfo) {
-      fetch("http://localhost:4000/checkout", {
+      fetch("https://coffee-shop-gabscs.onrender.com/checkout", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ items: productData }),
