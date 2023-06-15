@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC, useEffect, useState } from "react";
 import { HiOutlineX } from "react-icons/hi";
 import CartPopUpCard from "./cart-card";
 import "./cart-popup.css";
@@ -17,6 +17,7 @@ export const CartPopUp: FC<Props> = ({ showCartHandler, showCart }) => {
   const navigate = useNavigate();
   const productData = useAppSelector((state) => state.cart.productData);
   const userInfo = useAppSelector((state) => state.cart.userInfo);
+  const [totalAmmount, setTotalAmmount] = useState(0);
 
   const handleViewCart = () => {
     showCartHandler();
@@ -30,6 +31,15 @@ export const CartPopUp: FC<Props> = ({ showCartHandler, showCart }) => {
       toast.error("Please sign in to checkout");
     }
   };
+
+  useEffect(() => {
+    let price = 0;
+    productData.map((coffee) => {
+      price += Number(coffee.price) * coffee.quantity;
+      return price;
+    });
+    setTotalAmmount(price);
+  }, [productData]);
 
   return (
     <div className={`cart-popup-wrapper ${showCart ? "active" : ""}`}>
@@ -47,11 +57,11 @@ export const CartPopUp: FC<Props> = ({ showCartHandler, showCart }) => {
         <div className="cart-popup-footer">
           <div className="cart-popup-footer-total">
             <h2>Subtotal</h2>
-            <span>$105.00</span>
+            <span>${totalAmmount}.00</span>
           </div>
           <div className="cart-popup-footer-total">
             <h2>Total</h2>
-            <span>$105.00</span>
+            <span>${totalAmmount}.00</span>
           </div>
           <div className="cart-popup-footer-actions">
             <FilledButton

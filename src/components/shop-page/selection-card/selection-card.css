@@ -1,6 +1,12 @@
 .selection-card {
   display: flex;
   flex-direction: column;
+  row-gap: 1rem;
+}
+
+.selection-card-info {
+  display: flex;
+  flex-direction: column;
 }
 
 article a {

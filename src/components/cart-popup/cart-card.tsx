@@ -33,16 +33,17 @@ export const CartPopUpCard: FC<Props> = ({ coffee }) => {
     );
   };
   const handleDecrementQuantity = () => {
-    dispatch(
-      decrementQuantity({
-        id: coffee.id,
-        name: coffee.name,
-        image: coffee.image,
-        price: coffee.price,
-        quantity: 1,
-        description: coffee.description,
-      })
-    );
+    coffee.quantity > 0 &&
+      dispatch(
+        decrementQuantity({
+          id: coffee.id,
+          name: coffee.name,
+          image: coffee.image,
+          price: coffee.price,
+          quantity: 1,
+          description: coffee.description,
+        })
+      );
   };
 
   return (

@@ -26,6 +26,8 @@ export const App: FC = () => {
       });
     });
 
+    window.scrollTo(0, 0);
+
     document.querySelectorAll(".fade-up").forEach((el) => {
       fadeUpObserver.observe(el);
     });

@@ -28,7 +28,10 @@ export const SelectionCard: FC<Props> = ({ coffee }) => {
   };
   return (
     <article className="selection-card">
-      <NavLink to={`/shop/details/${coffee.id}`} className="selection-card">
+      <NavLink
+        to={`/shop/details/${coffee.id}`}
+        className="selection-card-info"
+      >
         <img src={coffee.image} alt="" className="selection-card-img" />
         <div className="selection-card-content">
           <div className="selection-card-title">

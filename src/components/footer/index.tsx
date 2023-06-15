@@ -48,7 +48,9 @@ export const Footer: FC = () => {
             <h2>Navigate</h2>
             {dropdown === 1 ? <AiOutlineMinus /> : <AiOutlinePlus />}
           </div>
-          <ul className={dropdown === 1 ? "active" : ""}>
+          <ul
+            className={`footer-links-options ${dropdown === 1 ? "active" : ""}`}
+          >
             <li>
               <a href="https://bit.ly/3mOQDrv">Home</a>
             </li>
@@ -71,7 +73,9 @@ export const Footer: FC = () => {
             <h2>About us</h2>
             {dropdown === 2 ? <AiOutlineMinus /> : <AiOutlinePlus />}
           </div>
-          <ul className={dropdown === 2 ? "active" : ""}>
+          <ul
+            className={`footer-links-options ${dropdown === 2 ? "active" : ""}`}
+          >
             <li>
               <a href="https://bit.ly/3KPniFg">Galleria</a>
             </li>

@@ -1,16 +1,13 @@
 import { FC, useEffect, useRef, useState } from "react";
-import axios from "axios";
 import Separator from "../../separator";
 import "./selection.css";
 import { Coffee } from "../../../types/types";
 import Card from "../product card";
 import Button from "../../button";
 import { useAppSelector } from "../../../redux/store";
-import LoadingScreen from "../../loading";
 
 export const Selection: FC = () => {
   const coffees = useAppSelector((state) => state.info.coffees);
-  const status = useAppSelector((state) => state.info.status);
   const [data, setData] = useState<Array<Coffee>>();
   const fadeUpRefs = useRef<(HTMLDivElement | null)[]>([]);
 
@@ -48,28 +45,22 @@ export const Selection: FC = () => {
 
   return (
     <div className="selection">
-      {status === "loading" ? (
-        <div className="fade-up">
-          <LoadingScreen loading={status === "loading"} />
+      <div className="selection">
+        <div
+          className="selection-title fade-up"
+          ref={(el) => (fadeUpRefs.current[0] = el)}
+        >
+          <h1>GabsCS' featured coffee</h1>
+          <Separator color="var( --darker-brown)" />
         </div>
-      ) : (
-        <div className="selection">
-          <div
-            className="selection-title fade-up"
-            ref={(el) => (fadeUpRefs.current[0] = el)}
-          >
-            <h1>GabsCS' featured coffee</h1>
-            <Separator color="var( --darker-brown)" />
-          </div>
-          <Button text="Shop now!" />
-          <div
-            className="selection-coffees fade-up"
-            ref={(el) => (fadeUpRefs.current[1] = el)}
-          >
-            {data && data.map((item) => <Card product={item} key={item.id} />)}
-          </div>
+        <Button text="Shop now!" />
+        <div
+          className="selection-coffees fade-up"
+          ref={(el) => (fadeUpRefs.current[1] = el)}
+        >
+          {data && data.map((item) => <Card product={item} key={item.id} />)}
         </div>
-      )}
+      </div>
     </div>
   );
 };

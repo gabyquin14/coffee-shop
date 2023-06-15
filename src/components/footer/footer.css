@@ -70,12 +70,15 @@
   display: inline;
 }
 
-.footer-links ul {
-  /* display: flex; */
+.footer-links-options {
   flex-direction: column;
   row-gap: 1rem;
   margin-top: 1rem;
   display: none;
+}
+
+.footer-links-options.active {
+  display: flex !important;
 }
 
 .footer-links ul li,

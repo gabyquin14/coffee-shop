@@ -18,7 +18,7 @@
 .cart-coffees-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  grid-gap: 4rem;
+  grid-gap: 8rem;
 }
 
 .cart-total-container {
@@ -45,9 +45,14 @@
   margin: 0;
 }
 
+.cart-total-subtotal span:first-child {
+  width: 8rem;
+}
+
 .cart-total-subtotal span:last-child {
   color: var(--lighter-text);
   margin-left: 3rem;
+  text-align: left;
 }
 
 .cart-total {

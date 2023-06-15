@@ -45,6 +45,12 @@ export const Navigation: FC = () => {
     }
   }, [navbarRef, location.pathname]);
 
+  useEffect(() => {
+    menuBtnRef.current?.setAttribute("aria-expanded", String(false));
+    navbarRef.current?.classList.remove("active");
+    navLinksRef.current?.classList.remove("active");
+  }, [location.pathname]);
+
   const objectTarget = () => {
     if (location.pathname === "/") {
       return document.getElementById("hero");
