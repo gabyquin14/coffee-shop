@@ -6,6 +6,7 @@ import {
   AiOutlinePlus,
   AiOutlineMinus,
 } from "react-icons/ai";
+// import Loading from "../../../icons/loading.gif";
 import Crumbs from "../../crumbs";
 import { Coffee } from "../../../types/types";
 import { ToastContainer, toast } from "react-toastify";
@@ -19,6 +20,7 @@ interface Props {
 
 export const CoffeeDetails: FC<Props> = ({ coffee, setId }) => {
   const { id } = useParams();
+  const loading = require("../../../icons/loading.gif");
   const [baseQuantity, setBaseQuantity] = useState(1);
   const dispatch = useAppDispatch();
   const status = useAppSelector((state) => state.info.status);
@@ -43,7 +45,7 @@ export const CoffeeDetails: FC<Props> = ({ coffee, setId }) => {
   return (
     <>
       <section className="coffee-details ">
-        {coffee && (
+        {coffee ? (
           <>
             <Crumbs coffee={coffee.name} />
             <div className="coffee-details-container">
@@ -111,6 +113,10 @@ export const CoffeeDetails: FC<Props> = ({ coffee, setId }) => {
               </div>
             </div>
           </>
+        ) : (
+          <picture>
+            <img src={loading} alt="" width="400" height="400" />
+          </picture>
         )}
       </section>
 

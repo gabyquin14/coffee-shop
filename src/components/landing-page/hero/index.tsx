@@ -13,10 +13,10 @@ export const Hero: FC = () => {
           <h1>GAB'S COFFEE SHOP</h1>
           <Separator />
           <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio
-            debitis expedita est nisi praesentium sapiente enim doloribus
-            explicabo, facere porro, pariatur, quos similique dicta eaque
-            tenetur laudantium cumque numquam! Commodi.
+            Welcome to our amazing coffee shop! A place where everyone is
+            embraced with warmth and exceptional brews. Indulge in our
+            passion-filled coffees crafted with care. Join us and savor the
+            moments!
           </p>
           <FilledButton
             text="Shop now!"

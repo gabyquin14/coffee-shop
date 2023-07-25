@@ -8,6 +8,7 @@
 .coffee-details-img {
   width: 100%;
   max-width: 90vw;
+  max-height: 80vh;
   margin-top: 2rem;
   object-fit: cover;
 }
@@ -108,11 +109,6 @@
   .coffee-details-container {
     display: flex;
     column-gap: 4rem;
-  }
-
-  .coffee-details-img {
-    flex: 0 0 52.333333%;
-    max-width: 52.333333%;
   }
 
   .coffee-details-content {

@@ -10,6 +10,7 @@ export const Selection: FC = () => {
   const coffees = useAppSelector((state) => state.info.coffees);
   const [data, setData] = useState<Array<Coffee>>();
   const fadeUpRefs = useRef<(HTMLDivElement | null)[]>([]);
+  const loading = require("../../../icons/loading.gif");
 
   useEffect(() => {
     const selectedCoffees = [coffees[0], coffees[1], coffees[2], coffees[3]];
@@ -51,14 +52,20 @@ export const Selection: FC = () => {
           ref={(el) => (fadeUpRefs.current[0] = el)}
         >
           <h1>GabsCS' featured coffee</h1>
-          <Separator color="var( --darker-brown)" />
+          <Separator color="var(--darker-brown)" />
         </div>
         <Button text="Shop now!" />
         <div
           className="selection-coffees fade-up"
           ref={(el) => (fadeUpRefs.current[1] = el)}
         >
-          {data && data.map((item) => <Card product={item} key={item.id} />)}
+          {data ? (
+            data.map((item) => <Card product={item} key={item.id} />)
+          ) : (
+            <picture>
+              <img src={loading} alt="" width="400" height="400" />
+            </picture>
+          )}
         </div>
       </div>
     </div>

@@ -47,8 +47,8 @@ export const Navigation: FC = () => {
 
   useEffect(() => {
     menuBtnRef.current?.setAttribute("aria-expanded", String(false));
-    navbarRef.current?.classList.remove("active");
-    navLinksRef.current?.classList.remove("active");
+    // navbarRef.current?.classList.remove("active");
+    // navLinksRef.current?.classList.remove("active");
   }, [location.pathname]);
 
   const objectTarget = () => {
@@ -56,8 +56,6 @@ export const Navigation: FC = () => {
       return document.getElementById("hero");
     } else if (location.pathname === "/shop") {
       return document.getElementById("hero-shop");
-    } else if (location.pathname.includes("/shop/details")) {
-      return document.getElementById("coffe-main-image");
     } else {
       navbarRef.current?.classList.add("active");
     }
